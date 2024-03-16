@@ -46,7 +46,7 @@
                             <i class="toggle-icon" style="visibility: hidden;">▲</i>
                         @endif
                         <b><span class="category-name ms-2 bold">{{ $category->collectLocalization('name') }}</span></b>
-                        <!-- <span class="fw-bold fs-xs total-count ms-auto">{{ $productsCount }}</span> -->
+                        <span class="fw-bold fs-xs total-count ms-auto">{{ $productsCount }}</span> 
                     </a>
                     @if($category->childrenCategories->isNotEmpty())
                         @include('frontend.default.pages.products.inc.child_categories', ['children' => $category->childrenCategories, 'padding' => 15])
