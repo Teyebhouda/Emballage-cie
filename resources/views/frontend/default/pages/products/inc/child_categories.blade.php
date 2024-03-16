@@ -12,7 +12,7 @@
                         <i class="toggle-icon" style="visibility: hidden;">▼</i>
                     @endif
                     <span class="category-name ms-2">{{ $childCategory->collectLocalization('name') }}</span>
-                    <span class="fw-bold fs-xs total-count ms-auto">{{ $childProductsCount }}</span>
+                    <!-- <span class="fw-bold fs-xs total-count ms-auto">{{ $childProductsCount }}</span> -->
                 </a>
                 @if($childCategory->childrenCategories->isNotEmpty() && $padding < 150) <!-- Limit recursion depth to 150 -->
                     @include('frontend.default.pages.products.inc.child_categories', ['children' => $childCategory->childrenCategories, 'padding' => $padding + 15])
